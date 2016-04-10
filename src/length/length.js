@@ -8,7 +8,18 @@ export default class Length {
         this.unit = unit || "m";
     }
 
-    isEqual(length_instance) {
-        return this.length == length_instance.length && this.unit === length_instance.unit;
+    isEqual(lengthInstance) {
+        return this.length == lengthInstance.length && this.unit === lengthInstance.unit;
+    }
+
+    transformUnit(unit) {
+        let len = this.length * (UnitMap[this.unit] / UnitMap[unit]);
+        return new Length(len, unit);
     }
 }
+
+const UnitMap = {
+    "cm": 1,
+    "m": 100,
+    "km": 100000
+};
