@@ -1,13 +1,14 @@
 {
   "name": "tdd-length",
   "version": "1.0.0",
-  "description": "",
+  "description": "how to use tdd to build class library of length",
   "main": "index.js",
   "scripts": {
     "test": "karma start"
   },
   "author": "DaleDu",
   "license": "ISC",
+  "homepage": "http://dale-.github.io/tdd-length",
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
