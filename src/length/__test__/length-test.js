@@ -51,6 +51,19 @@ describe('Class Length', () => {
         });
     });
 
+    describe('#add: ', () => {
+
+        it('Adding two length with the same unit', () => {
+            let result= lengthOne.add(lengthTwoUnitM);
+            expect(result.length).toEqual(3);
+        });
+
+        it('Adding two length with the different unit', () => {
+            let result= lengthTwoUnitM.add(lengthTwoUnitCM);
+            expect(result.length).toEqual(202);
+        });
+    });
+
 
 });
 
