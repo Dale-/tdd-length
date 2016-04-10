@@ -1,0 +1,6 @@
+{
+  "name": "Tdd-length",
+  "tagline": "",
+  "body": "### TDD WorkShop\r\n- 立足点：站在如何如何使用系统的角度去思考\r\n- 系统性思考：可以把任务的划分想象为一个二叉树，那么这个二叉树的所有第一个子节点需要穷尽\r\n- 划分二叉树规则：直到给这个二叉树划分到可以立即写测试、分解任务一般在3-7个层之间，并且互斥\r\n\r\n### Authors and Contributors\r\nDaleDu\r\n\r\n### Support or Contact\r\n18717394542@163.com",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
