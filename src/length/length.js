@@ -13,8 +13,15 @@ export default class Length {
     }
 
     transformUnit(unit) {
-        let len = this.length * (UnitMap[this.unit] / UnitMap[unit]);
-        return new Length(len, unit);
+        return this.length * (UnitMap[this.unit] / UnitMap[unit]);
+    }
+
+    add(lengthInstance) {
+        let length = lengthInstance.length;
+        if(this.unit !== lengthInstance.unit) {
+            length = this.transformUnit(lengthInstance.unit);
+        }
+        return new Length(length + this.length, lengthInstance.unit);
     }
 }
 

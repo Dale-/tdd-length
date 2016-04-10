@@ -47,20 +47,21 @@ describe('Class Length', () => {
 
         it('Transforming the unit should be return the length of appoint unit', () => {
             let resultLength = lengthOneUnitM.transformUnit('cm');
-            expect(resultLength.length).toEqual(100);
+            expect(resultLength).toEqual(100);
         });
     });
 
     describe('#add: ', () => {
 
         it('Adding two length with the same unit', () => {
-            let result= lengthOne.add(lengthTwoUnitM);
+            let result = lengthOne.add(lengthTwoUnitM);
             expect(result.length).toEqual(3);
         });
 
         it('Adding two length with the different unit', () => {
-            let result= lengthTwoUnitM.add(lengthTwoUnitCM);
+            let result = lengthTwoUnitM.add(lengthTwoUnitCM);
             expect(result.length).toEqual(202);
+            expect(result.unit).toEqual(lengthTwoUnitCM.unit);
         });
     });
 
