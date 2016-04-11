@@ -13,27 +13,29 @@ export default class Length {
     }
 
     transformUnit(unit) {
-        return this.length * (UnitMap[this.unit] / UnitMap[unit]);
+        return this.length * (Length.UnitMap[this.unit] / Length.UnitMap[unit]);
     }
 
     add(lengthInstance) {
-        let length = this.length;
-        if(this.unit !== lengthInstance.unit) {
-            length = this.transformUnit(lengthInstance.unit);
-        }
-        return new Length(length + lengthInstance.length, lengthInstance.unit);
+        let myLength = this.getLength(lengthInstance);
+        return new Length(myLength + lengthInstance.length, lengthInstance.unit);
     }
 
     subtract(lengthInstance) {
+        let myLength = this.getLength(lengthInstance);
+        return new Length(myLength - lengthInstance.length, lengthInstance.unit);
+    }
+
+    getLength(lengthInstance) {
         let length = this.length;
-        if(this.unit !== lengthInstance.unit) {
+        if (this.unit !== lengthInstance.unit) {
             length = this.transformUnit(lengthInstance.unit);
         }
-        return new Length(length - lengthInstance.length, lengthInstance.unit);
+        return length;
     }
 }
 
-const UnitMap = {
+Length.UnitMap = {
     "cm": 1,
     "m": 100,
     "km": 100000
