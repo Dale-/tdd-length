@@ -79,6 +79,14 @@ describe('Class Length', () => {
         });
     });
 
+    describe('#getLength: ', () => {
+
+        it('Getting the length when given the unit with the input length', () => {
+            let result = lengthTwoUnitM.getLength('cm');
+            expect(result).toEqual(200);
+        });
+    });
+
 
 });
 
