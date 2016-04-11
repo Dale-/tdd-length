@@ -17,11 +17,19 @@ export default class Length {
     }
 
     add(lengthInstance) {
-        let length = lengthInstance.length;
+        let length = this.length;
         if(this.unit !== lengthInstance.unit) {
             length = this.transformUnit(lengthInstance.unit);
         }
-        return new Length(length + this.length, lengthInstance.unit);
+        return new Length(length + lengthInstance.length, lengthInstance.unit);
+    }
+
+    subtract(lengthInstance) {
+        let length = this.length;
+        if(this.unit !== lengthInstance.unit) {
+            length = this.transformUnit(lengthInstance.unit);
+        }
+        return new Length(length - lengthInstance.length, lengthInstance.unit);
     }
 }
 

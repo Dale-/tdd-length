@@ -65,6 +65,20 @@ describe('Class Length', () => {
         });
     });
 
+    describe('#subtraction: ', () => {
+
+        it('Substracting two length with the same unit', () => {
+            let result = lengthTwoUnitM.subtract(lengthOneUnitM);
+            expect(result.length).toEqual(1);
+        });
+
+        it('Substracting two length with the different unit', () => {
+            let result = lengthTwoUnitM.subtract(lengthTwoUnitCM);
+            expect(result.length).toEqual(198);
+            expect(result.unit).toEqual(lengthTwoUnitCM.unit);
+        });
+    });
+
 
 });
 
