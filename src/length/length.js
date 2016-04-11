@@ -17,16 +17,16 @@ export default class Length {
     }
 
     add(lengthInstance) {
-        let myLength = this.getLength(lengthInstance.unit);
+        let myLength = this.getLengthByUnit(lengthInstance.unit);
         return new Length(myLength + lengthInstance.length, lengthInstance.unit);
     }
 
     subtract(lengthInstance) {
-        let myLength = this.getLength(lengthInstance.unit);
+        let myLength = this.getLengthByUnit(lengthInstance.unit);
         return new Length(myLength - lengthInstance.length, lengthInstance.unit);
     }
 
-    getLength(unit) {
+    getLengthByUnit(unit) {
         let length = this.length;
         if (this.unit !== unit) {
             length = this.transformUnit(unit);
