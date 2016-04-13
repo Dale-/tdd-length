@@ -2,7 +2,6 @@
  * Created by Dale on 4/10/16.
  */
 
-//import {Unit, UnitMap} from 'unit';
 import {Unit, UnitMap} from './unit';
 
 export default class Length {
@@ -13,12 +12,11 @@ export default class Length {
     }
 
     isEqual(length) {
+        return this.unit === length.unit ? this.len === length.len : this.getLengthOfSameUnit(length);
+    }
 
-        if (this.unit === length.unit) {
-            return this.len === length.len;
-        } else {
-            return this.len * this.unit.magnitude === length.len * length.unit.magnitude;
-        }
+    getLengthOfSameUnit(length) {
+        return this.len * this.unit.magnitude === length.len * length.unit.magnitude;
     }
 }
 

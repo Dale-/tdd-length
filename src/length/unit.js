@@ -16,5 +16,4 @@ const UnitMap = {
     km: new Unit("km", 100000)
 };
 
-
 export {Unit, UnitMap};
