@@ -28,7 +28,11 @@ export default class Length {
     }
 
     subtract(length) {
-        return new Length(this.len - length.len, this.unit.unit);
+        if(this.unit === length.unit) {
+            return new Length(this.len - length.len, this.unit.unit);
+        } else {
+            return new Length(length.unit.getLengthByUnit(this) - length.len, length.unit.unit);
+        }
     }
 }
 

@@ -72,9 +72,14 @@ describe('Class Length', () => {
 
     describe('#subtract: ', () => {
 
-        it('two m subtracte one m equal one m', () => {
+        it('two m subtract one m equal one m', () => {
             let result = lengthTwoUnitM.subtract(lengthOneUnitM);
             expect(result.len).toEqual(1);
+        });
+
+        it('two m subtract one cm equal one m', () => {
+            let result = lengthTwoUnitM.subtract(lengthOneUnitCM);
+            expect(result.len).toEqual(199);
         });
 
     });
