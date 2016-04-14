@@ -28,7 +28,7 @@ export default class Length {
         return this.calculate('-', length);
     }
 
-    calculate(opr,length) {
+    calculate(opr, length) {
         const operations = {
             '+': (a, b, unit) => new Length(a + b, unit),
             '-': (a, b, unit) => new Length(a - b, unit)

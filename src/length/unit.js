@@ -15,8 +15,8 @@ class Unit {
 }
 
 const UnitMap = {
-    cm: new Unit("cm", 1),
     m: new Unit("m", 100),
+    cm: new Unit("cm", 1),
     km: new Unit("km", 100000)
 };
 
