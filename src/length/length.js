@@ -20,19 +20,26 @@ export default class Length {
     }
 
     add(length) {
-        if(this.unit === length.unit) {
-            return new Length(this.len + length.len, this.unit);
-        } else {
-            return new Length(length.unit.getLengthByUnit(this) + length.len, length.unit.unit);
-        }
+        return this.calculate('+', length);
     }
 
     subtract(length) {
-        if(this.unit === length.unit) {
-            return new Length(this.len - length.len, this.unit.unit);
+
+        return this.calculate('-', length);
+    }
+
+    calculate(opr,length) {
+        const operations = {
+            '+': (a, b, unit) => new Length(a + b, unit),
+            '-': (a, b, unit) => new Length(a - b, unit)
+        };
+
+        if (this.unit === length.unit) {
+            return operations[opr](this.len, length.len, this.unit);
         } else {
-            return new Length(length.unit.getLengthByUnit(this) - length.len, length.unit.unit);
+            return operations[opr](length.unit.getLengthByUnit(this), length.len, length.unit.unit);
         }
     }
+
 }
 
