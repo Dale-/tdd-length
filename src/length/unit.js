@@ -8,6 +8,10 @@ class Unit {
         this.unit = unit;
         this.magnitude = magnitude;
     }
+
+    getLengthByUnit(length) {
+        return length.len * (length.unit.magnitude / this.magnitude);
+    }
 }
 
 const UnitMap = {

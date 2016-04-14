@@ -18,5 +18,17 @@ export default class Length {
     getLengthOfSameUnit(length) {
         return this.len * this.unit.magnitude === length.len * length.unit.magnitude;
     }
+
+    add(length) {
+        if(this.unit === length.unit) {
+            return new Length(this.len + length.len, this.unit);
+        } else {
+            return new Length(length.unit.getLengthByUnit(this) + length.len, length.unit.unit);
+        }
+    }
+
+    subtract(length) {
+        return new Length(this.len - length.len, this.unit.unit);
+    }
 }
 
