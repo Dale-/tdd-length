@@ -4,8 +4,7 @@
 
 class Unit {
 
-    constructor(unit, magnitude) {
-        this.unit = unit;
+    constructor(magnitude) {
         this.magnitude = magnitude;
     }
 
@@ -15,9 +14,9 @@ class Unit {
 }
 
 const UnitMap = {
-    m: new Unit("m", 100),
-    cm: new Unit("cm", 1),
-    km: new Unit("km", 100000)
+    m: new Unit(100),
+    cm: new Unit(1),
+    km: new Unit(100000)
 };
 
 export {Unit, UnitMap};

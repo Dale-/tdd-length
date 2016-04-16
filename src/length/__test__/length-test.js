@@ -63,8 +63,9 @@ describe('Class Length', () => {
 
         it('one m add one hundred cm equal one hundred and one cm ', () => {
             let result = lengthOneUnitM.add(lengthOneHundredUnitCM);
+            console.log(result);
             expect(result.len).toEqual(200);
-            expect(result.unit.unit).toEqual('cm');
+            expect(result.unit.magnitude).toEqual(1);
         });
 
 

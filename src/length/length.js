@@ -6,9 +6,9 @@ import {Unit, UnitMap} from './unit';
 
 export default class Length {
 
-    constructor(len, unitString) {
+    constructor(len, unit) {
         this.len = len;
-        this.unit = UnitMap[unitString];
+        this.unit = UnitMap[unit] || unit;
     }
 
     isEqual(length) {
@@ -37,7 +37,7 @@ export default class Length {
         if (this.unit === length.unit) {
             return operations[opr](this.len, length.len, this.unit);
         } else {
-            return operations[opr](length.unit.getLengthByUnit(this), length.len, length.unit.unit);
+            return operations[opr](length.unit.getLengthByUnit(this), length.len, length.unit);
         }
     }
 
