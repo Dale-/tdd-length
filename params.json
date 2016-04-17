@@ -1,6 +1,6 @@
 {
   "name": "Tdd-length",
   "tagline": "",
-  "body": "### TDD WorkShop\r\n- 立足点：站在如何如何使用系统的角度去思考\r\n- 系统性思考：可以把任务的划分想象为一个二叉树，那么这个二叉树的所有第一个子节点需要穷尽\r\n- 划分二叉树规则：直到给这个二叉树划分到可以立即写测试、分解任务一般在3-7个层之间，并且互斥\r\n\r\n### Authors and Contributors\r\nDaleDu\r\n\r\n### Support or Contact\r\n18717394542@163.com",
+  "body": "### TDD WorkShop\r\n\r\n- 立足点：站在如何如何使用系统的角度去思考\r\n- 系统性思考：可以把任务的划分想象为一个二叉树，那么这个二叉树的所有第一个子节点需要穷尽\r\n- 划分二叉树规则：直到给这个二叉树划分到可以立即写测试、分解任务一般在3-7个层之间，并且互斥\r\n\r\n- Given -> When -> Then\r\n- 写测试的时候需要时刻注意input output\r\n- TDD的过程: 红->绿->重构\r\n- 写测试和实现的过程就好像是向上的楼梯,每一次的叠加都是要有实效的\r\n\r\n#### WorkShop Rafocry\r\n- primitive envy:  用抽象类型替换原始类型\r\n- 对行为进行操作,而不是本身的属性\r\n\r\n\r\n### Authors and Contributors\r\nDaleDu\r\n\r\n### Support or Contact\r\ndaledu0326@gmail.com",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
