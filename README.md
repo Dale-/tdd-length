@@ -1,4 +1,4 @@
-### HomePage : dale-.github.io/tdd-length
+## HomePage : dale-.github.io/tdd-length
 
 ### TDD WorkShop
 
@@ -11,7 +11,7 @@
 - TDD的过程: 红->绿->重构
 - 写测试和实现的过程就好像是向上的楼梯,每一次的叠加都是要有实效的
 
-#### WorkShop Rafocry
+### WorkShop Rafocry
 - primitive envy:  用抽象类型替换原始类型
 - 对行为进行操作,而不是本身的属性
 
